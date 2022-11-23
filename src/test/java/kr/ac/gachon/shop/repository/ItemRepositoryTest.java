@@ -29,6 +29,8 @@ import static org.hibernate.tool.schema.SchemaToolingLogging.LOGGER;
 class ItemRepositoryTest {
     @Autowired // 필드 Bean 주입
     ItemRepository itemRepository;
+    @PersistenceContext
+    EntityManager em;
 
     @Test // Method 테스트 대상 지정
     @DisplayName("상품 저장 확인") // 테스트명
@@ -118,9 +120,6 @@ class ItemRepositoryTest {
             System.out.println(item.toString());
         }
     }
-
-    @PersistenceContext
-    EntityManager em;
 
     @Test
     @DisplayName("Querydsl 조회 확인")

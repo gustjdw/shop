@@ -1,6 +1,6 @@
 package kr.ac.gachon.shop.entity;
 
-import kr.ac.gachon.shop.config.OrderStatus;
+import kr.ac.gachon.shop.constant.OrderStatus;
 import lombok.Getter;
 import lombok.Setter;
 

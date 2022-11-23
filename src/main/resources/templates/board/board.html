@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      layout:decorate="~{layouts/layout}">
+
+<div layout:fragment="content">
+  <h1>board 페이지입니다.</h1>
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th>번호</th>
+      <th>제목</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>1</td>
+      <td>제목제목</td>
+    </tr>
+    </tbody>
+  </table>
+  <a th:href="@{/board/create}" class="btn btn-primary" sec:authorize="isAuthenticated()">게시글 등록</a>
+</div>
+</html>
